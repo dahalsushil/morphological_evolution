@@ -1,6 +1,0 @@
-i=1
-for f in `ls | sed 's/_pno_.*//g' | sort | uniq`; do
-rename "s/${f}_pno_/pno${i}_/g" *.csv
-((i++))
-echo "${f}\tpno${i}" >> renamed_guide.txt
-done
